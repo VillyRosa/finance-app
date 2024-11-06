@@ -1,0 +1,50 @@
+main {
+  width: 100%;
+  height: 100vh;
+  padding: 12px 140px 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  app-banner {
+    height: 100%;
+  }
+
+  form {
+    width: 40%;
+    padding: 32px;
+    border-radius: 12px;
+    background-color: #fff;
+
+    h1 {
+      color: var(--grey-900);
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 32px;
+    }
+
+    .list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      app-button {
+        margin-top: 16px;
+      }
+    }
+
+    p {
+      width: 100%;
+      margin-top: 32px;
+      text-align: center;
+      color: var(--grey-500);
+
+      a {
+        color: var(--grey-900);
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+}
