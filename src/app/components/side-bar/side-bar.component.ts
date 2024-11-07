@@ -10,4 +10,8 @@ export class SideBarComponent {
   @Input() minimizeMenu: boolean = false;
   @Output() onChangeMinimizeMenu = new EventEmitter<void>();
 
+  public emitChangeMinimizeMenu(): void {
+    this.onChangeMinimizeMenu.emit();
+  }
+
 }

@@ -1,6 +1,9 @@
 <div class="selectBox">
   <label [for]="name">{{label}}</label>
-  <select [name]="name" [id]="name">
-    <option *ngFor="let option of options" [value]="option">{{option}}</option>
-  </select>
+  <div class="select">
+    <select [name]="name" [id]="name">
+      <option *ngFor="let option of options" [value]="option">{{option}}</option>
+    </select>
+    <app-icon iconPath="icon-caret-down.svg" />
+  </div>
 </div>

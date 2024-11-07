@@ -10,10 +10,11 @@
     </div>
   </div>
   <app-menu
+    id="minimizeMenu"
     text="Minimize Menu"
     [iconPath]="minimizeMenu ? 'icon-maximize-menu.svg' : 'icon-minimize-menu.svg'"
     [noRedirect]="true"
     [minimizeMenu]="minimizeMenu"
-    (click)="onChangeMinimizeMenu.emit()"
+    (click)="emitChangeMinimizeMenu()"
   />
 </aside>

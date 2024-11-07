@@ -1,11 +1,14 @@
 <main>
+  <header>
+    <app-icon iconPath="logo-large.svg" />
+  </header>
   <app-banner />
 
   <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
     <h1>{{title}}</h1>
     <div class="list">
       <router-outlet />
-      <app-button [text]="title" type="submit" />
+      <app-button type="submit">{{title}}</app-button>
     </div>
     <p>
       {{title === 'Login' ? 'Need to create a account? ' : 'Already have an account? '}}

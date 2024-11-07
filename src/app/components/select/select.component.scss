@@ -1,13 +1,29 @@
 .selectBox {
+  width: 100%;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+
   label {
-    margin-right: 8px;
     color: var(--grey-500);
   }
   
-  select {
-    padding: 12px 20px;
-    border-radius: 8px;
+  .select {
     border: 1px solid var(--beige-500);
-    outline: none;
+    border-radius: 8px;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    
+    select {
+      width: 100%;
+      color: var(--grey-900);
+      border: none;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
   }
 }

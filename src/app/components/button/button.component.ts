@@ -9,5 +9,7 @@ export class ButtonComponent {
 
   @Input() text: string = 'Button';
   @Input() type: 'button' | 'submit' = 'button';
+  @Input() disabled: boolean = false;
+  @Input() color: 'primary' | 'secondary' | 'destroy' = 'primary';
 
 }
