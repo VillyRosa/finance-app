@@ -13,4 +13,6 @@ export class InputComponent {
   @Input() name: string = '';
   @Input() value: string = '';
 
+  public showPassword: boolean = false;
+
 }

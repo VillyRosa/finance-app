@@ -1,10 +1,22 @@
 <div class="inputBox">
   <label for={{name}}>{{label}}</label>
-  <input
-    type={{type}}
-    id={{name}}
-    placeholder={{placeholder}}
-    name={{name}}
-    value={{value}}
-  >
+  <div class="input">
+    <input
+      type={{type}}
+      id={{name}}
+      placeholder={{placeholder}}
+      name={{name}}
+      value={{value}}
+    >
+    <app-icon
+      *ngIf="type === 'password'"
+      iconPath="icon-show-password.svg"
+      (click)="type = 'text'; showPassword = true"
+    />
+    <app-icon
+      *ngIf="showPassword"
+      iconPath="icon-hide-password.svg"
+      (click)="type = 'password'; showPassword = false"
+    />
+  </div>
 </div>

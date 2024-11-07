@@ -11,7 +11,7 @@ import { PotsComponent } from './pages/pots/pots.component';
 import { RecurringBillsComponent } from './pages/recurring-bills/recurring-bills.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/overview', pathMatch: 'full' },
   { path: 'overview', component: OverviewComponent, canActivate: [AuthGuard] },
   { path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard] },
   { path: 'budgets', component: BudgetsComponent, canActivate: [AuthGuard] },

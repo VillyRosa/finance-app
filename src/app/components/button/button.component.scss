@@ -5,4 +5,11 @@ button {
   background-color: var(--grey-900);
   color: var(--white);
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--grey-500);
+  }
 }
