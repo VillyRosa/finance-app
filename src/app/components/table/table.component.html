@@ -1,4 +1,12 @@
 <div class="tableContainer">
+  <header>
+    <app-input placeholder="Search transaction" type="search" />
+    <div>
+      <app-select label="Sort by" [options]="['Latest', 'Oldest', 'A to Z', 'Z to A', 'Highest', 'Lowest']" />
+      <app-select label="Category" [options]="['All Transactions', 'Entertainment', 'Bills', 'Groceries', 'Dining Out', 'Transportation', 'Personal Care', 'Education', 'Lifestyle', 'Shopping', 'General']" />
+    </div>
+  </header>
+
   <table>
     <thead>
       <tr>

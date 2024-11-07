@@ -19,6 +19,7 @@ const routes: Routes = [
     component: AuthLayoutComponent,
     canActivate: [GuestGuard],
     children: [
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
       { path: 'sign-up', component: SignUpComponent }
     ]

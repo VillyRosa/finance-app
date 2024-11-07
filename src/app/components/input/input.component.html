@@ -1,12 +1,12 @@
 <div class="inputBox">
-  <label for={{name}}>{{label}}</label>
+  <label [for]="name">{{label}}</label>
   <div class="input">
     <input
-      type={{type}}
-      id={{name}}
-      placeholder={{placeholder}}
-      name={{name}}
-      value={{value}}
+      type="{{type === 'search' ? 'text' : type}}"
+      [id]="name"
+      [placeholder]="placeholder"
+      [name]="name"
+      [value]="value"
     >
     <app-icon
       *ngIf="type === 'password'"
@@ -18,5 +18,6 @@
       iconPath="icon-hide-password.svg"
       (click)="type = 'password'; showPassword = false"
     />
+    <app-icon *ngIf="type === 'search'" iconPath="icon-search.svg" />
   </div>
 </div>

@@ -1,0 +1,13 @@
+.selectBox {
+  label {
+    margin-right: 8px;
+    color: var(--grey-500);
+  }
+  
+  select {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--beige-500);
+    outline: none;
+  }
+}

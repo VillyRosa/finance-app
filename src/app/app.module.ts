@@ -23,6 +23,7 @@ import { OverviewCardComponent } from './pages/overview/overview-card/overview-c
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { TableComponent } from './components/table/table.component';
 import { PaginationComponent } from './components/table/pagination/pagination.component';
+import { SelectComponent } from './components/select/select.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { PaginationComponent } from './components/table/pagination/pagination.co
     AuthLayoutComponent,
     TableComponent,
     PaginationComponent,
+    SelectComponent,
   ],
   imports: [
     BrowserModule,
