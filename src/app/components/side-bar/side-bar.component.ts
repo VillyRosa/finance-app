@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent {
+
+  @Input() minimizeMenu: boolean = false;
+  @Output() onChangeMinimizeMenu = new EventEmitter<void>();
 
 }

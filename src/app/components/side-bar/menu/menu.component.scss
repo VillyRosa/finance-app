@@ -11,24 +11,34 @@
   align-items: center;
   text-decoration: none;
   transition: all 0.3s ease;
+  cursor: pointer;
 
-  &:hover {
-    color: var(--white);
-  }
-}
-
-.active {
-  background-color: #fff;
-  border-color: var(--green);
-  color: var(--green);
-  span {
-    color: var(--grey-900);
-  }
-
-  &:hover {
+  &.active {
+    background-color: var(--white);
+    border-color: var(--green);
     color: var(--green);
+    cursor: default;
     span {
       color: var(--grey-900);
     }
+
+    &:hover {
+      color: var(--green);
+      span {
+        color: var(--grey-900);
+      }
+    }
+  }
+
+  &.minimizeMenu {
+    border: none;
+
+    &.active {
+      background-color: transparent;
+    }
+  }
+
+  &:hover {
+    color: var(--white);
   }
 }

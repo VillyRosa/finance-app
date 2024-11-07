@@ -9,16 +9,33 @@ import { TransactionsComponent } from './pages/transactions/transactions.compone
 import { BudgetsComponent } from './pages/budgets/budgets.component';
 import { PotsComponent } from './pages/pots/pots.component';
 import { RecurringBillsComponent } from './pages/recurring-bills/recurring-bills.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { GuestGuard } from './guards/Guest.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/overview', pathMatch: 'full' },
-  { path: 'overview', component: OverviewComponent, canActivate: [AuthGuard] },
-  { path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard] },
-  { path: 'budgets', component: BudgetsComponent, canActivate: [AuthGuard] },
-  { path: 'pots', component: PotsComponent, canActivate: [AuthGuard] },
-  { path: 'recurring-bills', component: RecurringBillsComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent },
-  { path: 'sign-up', component: SignUpComponent },
+  {
+    path: '',
+    component: AuthLayoutComponent,
+    canActivate: [GuestGuard],
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'sign-up', component: SignUpComponent }
+    ]
+  },
+  {
+    path: '',
+    component: MainLayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: '', redirectTo: 'overview', pathMatch: 'full' },
+      { path: 'overview', component: OverviewComponent },
+      { path: 'transactions', component: TransactionsComponent },
+      { path: 'budgets', component: BudgetsComponent },
+      { path: 'pots', component: PotsComponent },
+      { path: 'recurring-bills', component: RecurringBillsComponent }
+    ]
+  },
   { path: '**', component: NotFoundComponent }
 ];
 

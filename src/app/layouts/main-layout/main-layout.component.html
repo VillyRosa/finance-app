@@ -1,0 +1,9 @@
+<div class="container" [ngClass]="{'minimizeMenu': minimizeMenu}">
+  <app-side-bar [minimizeMenu]="minimizeMenu" (onChangeMinimizeMenu)="toggleMenu()" />
+  <main>
+    <header>
+      <h1>{{getTitlePage()}}</h1>
+    </header>
+    <router-outlet />
+  </main>
+</div>

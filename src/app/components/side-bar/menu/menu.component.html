@@ -1,4 +1,12 @@
-<a class="menu" [ngClass]="{'active': isActive()}" href={{redirectTo}}>
+<div
+  class="menu"
+  [ngClass]="{
+    'active': isActive(),
+    'minimizeMenu': minimizeMenu
+  }"
+  title={{text}}
+  (click)="navigateTo()"
+>
   <app-icon [iconPath]="iconPath" />
-  <span>{{text}}</span>
-</a>
+  <span *ngIf="!minimizeMenu">{{text}}</span>
+</div>

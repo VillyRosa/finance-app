@@ -1,11 +1,19 @@
-<aside>
+<aside [ngClass]="{'minimizeMenu': minimizeMenu}">
   <div>
-    <app-icon class="logo" iconPath="logo-large.svg" />
-    <app-menu text="Overview" iconPath="icon-nav-overview.svg" redirectTo="/overview" />
-    <app-menu text="Transactions" iconPath="icon-nav-transactions.svg" redirectTo="/transactions" />
-    <app-menu text="Budgets" iconPath="icon-nav-budgets.svg" redirectTo="/budgets" />
-    <app-menu text="Pots" iconPath="icon-nav-pots.svg" redirectTo="/pots" />
-    <app-menu text="Recurring Bills" iconPath="icon-nav-recurring-bills.svg" redirectTo="/recurring-bills" />
+    <app-icon class="logo" [iconPath]="minimizeMenu ? 'logo-small.svg' : 'logo-large.svg'" />
+    <div class="menuList">
+      <app-menu text="Overview" iconPath="icon-nav-overview.svg" redirectTo="/overview" [minimizeMenu]="minimizeMenu" />
+      <app-menu text="Transactions" iconPath="icon-nav-transactions.svg" redirectTo="/transactions" [minimizeMenu]="minimizeMenu" />
+      <app-menu text="Budgets" iconPath="icon-nav-budgets.svg" redirectTo="/budgets" [minimizeMenu]="minimizeMenu" />
+      <app-menu text="Pots" iconPath="icon-nav-pots.svg" redirectTo="/pots" [minimizeMenu]="minimizeMenu" />
+      <app-menu text="Recurring Bills" iconPath="icon-nav-recurring-bills.svg" redirectTo="/recurring-bills" [minimizeMenu]="minimizeMenu" />
+    </div>
   </div>
-  <app-menu text="Minimize Menu" iconPath="icon-minimize-menu.svg" redirectTo="/login" />
+  <app-menu
+    text="Minimize Menu"
+    [iconPath]="minimizeMenu ? 'icon-maximize-menu.svg' : 'icon-minimize-menu.svg'"
+    [noRedirect]="true"
+    [minimizeMenu]="minimizeMenu"
+    (click)="onChangeMinimizeMenu.emit()"
+  />
 </aside>

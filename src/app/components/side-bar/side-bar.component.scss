@@ -12,6 +12,16 @@ aside {
   justify-content: space-between;
 
   .logo {
-    padding: 0 0 64px 32px;
+    padding: 0 0 38px 32px;
   }
+
+  .menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+.minimizeMenu {
+  width: 88px;
 }

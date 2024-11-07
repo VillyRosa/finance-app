@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -8,7 +8,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrls: ['./icon.component.scss']
 })
 
-export class IconComponent implements OnInit {
+export class IconComponent implements OnInit, OnChanges {
 
   @Input() iconPath: string = '';
   public svgContent: SafeHtml = '';
@@ -17,6 +17,12 @@ export class IconComponent implements OnInit {
 
   public ngOnInit(): void {
     this.loadSvg();
+  }
+
+  public ngOnChanges(changes: SimpleChanges): void {
+    if (changes['iconPath']) {
+      this.loadSvg();
+    }
   }
 
   private loadSvg(): void {

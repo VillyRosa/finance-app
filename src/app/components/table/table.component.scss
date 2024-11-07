@@ -1,0 +1,32 @@
+.tableContainer {
+  width: 100%;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: var(--white);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        th {
+          padding: 16px;
+          text-align: start;
+          font-weight: normal;
+          color: var(--grey-500);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-top: 1px solid var(--grey-100);
+        
+        td {
+          padding: 16px;
+        }
+      }
+    }
+  }
+}

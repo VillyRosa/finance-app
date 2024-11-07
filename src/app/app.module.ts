@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { OverviewComponent } from './pages/overview/overview.component';
@@ -19,7 +18,11 @@ import { RecurringBillsComponent } from './pages/recurring-bills/recurring-bills
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MenuComponent as SideBarMenuComponent } from './components/side-bar/menu/menu.component';
 import { IconComponent } from './components/icon/icon.component';
-import { FormsModule } from '@angular/forms';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { OverviewCardComponent } from './pages/overview/overview-card/overview-card.component';
+import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { TableComponent } from './components/table/table.component';
+import { PaginationComponent } from './components/table/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,11 @@ import { FormsModule } from '@angular/forms';
     SideBarComponent,
     SideBarMenuComponent,
     IconComponent,
+    MainLayoutComponent,
+    OverviewCardComponent,
+    AuthLayoutComponent,
+    TableComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<main>
+  <app-banner />
+
+  <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <h1>{{title}}</h1>
+    <div class="list">
+      <router-outlet />
+      <app-button [text]="title" type="submit" />
+    </div>
+    <p>
+      {{title === 'Login' ? 'Need to create a account? ' : 'Already have an account? '}}
+      <a [routerLink]="title === 'Login' ? '/sign-up' : '/login'" (click)="title === 'Login' ? title = 'Sign Up' : title = 'Login'">
+        {{title === 'Login' ? 'Sign Up' : 'Login'}}
+      </a>
+    </p>
+  </form>
+</main>
