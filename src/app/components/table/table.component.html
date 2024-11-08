@@ -14,29 +14,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Emma Richardson</td>
-        <td>General</td>
-        <td>19 Aug 2024</td>
-        <td>+$75.50</td>
-      </tr>
-      <tr>
-        <td>Savory Bites Bistro</td>
-        <td>Dining Out</td>
-        <td>19 Aug 2024</td>
-        <td>-$55.50</td>
-      </tr>
-      <tr>
-        <td>Daniel Carter</td>
-        <td>General</td>
-        <td>18 Aug 2024</td>
-        <td>-$42.30</td>
-      </tr>
-      <tr>
-        <td>Sun Park</td>
-        <td>General</td>
-        <td>19 Aug 2024</td>
-        <td>+$120.00</td>
+      <tr *ngFor="let row of rows">
+        <td *ngFor="let cell of row.cells">
+          <div class="alignElements">
+            <ng-container *ngFor="let item of cell">
+              <app-avatar *ngIf="item.type === 'avatar'" [path]="toString(item.value)"></app-avatar>
+              <app-money-display *ngIf="item.type === 'money'" [value]="toNumber(item.value)" />
+              <span *ngIf="item.type === 'text'" [ngClass]="{'bold': item.fontWeight === 'bold'}">{{ item.value }}</span>
+            </ng-container>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -39,9 +39,22 @@
     tbody {
       tr {
         border-top: 1px solid var(--grey-100);
-        
+
         td {
           padding: 16px;
+          color: var(--grey-500);
+          
+          .alignElements {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+
+            .bold {
+              color: var(--grey-900);
+              font-weight: bold;
+            }
+          }
         }
       }
     }

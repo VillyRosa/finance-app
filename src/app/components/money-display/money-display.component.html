@@ -1,0 +1,3 @@
+<span [ngClass]="{'positive': value >= 0}">
+  {{ value >= 0 ? '+' : '' }}{{ value | currency: 'USD': 'symbol': '1.2-2' }}
+</span>

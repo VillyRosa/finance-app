@@ -1,0 +1,7 @@
+span {
+  font-weight: bold;
+  color: var(--grey-900);
+  &.positive {
+    color: var(--green);
+  }
+}

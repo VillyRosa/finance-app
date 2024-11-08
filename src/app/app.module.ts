@@ -24,6 +24,8 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { TableComponent } from './components/table/table.component';
 import { PaginationComponent } from './components/table/pagination/pagination.component';
 import { SelectComponent } from './components/select/select.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { MoneyDisplayComponent } from './components/money-display/money-display.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { SelectComponent } from './components/select/select.component';
     TableComponent,
     PaginationComponent,
     SelectComponent,
+    AvatarComponent,
+    MoneyDisplayComponent,
   ],
   imports: [
     BrowserModule,
