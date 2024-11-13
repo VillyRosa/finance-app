@@ -1,16 +1,16 @@
 <div class="tableContainer">
   <header>
-    <app-input placeholder="Search transaction" type="search" />
+    <app-input *ngIf="showSearch" [placeholder]="searchPlaceholder" type="search" />
     <div>
-      <app-select label="Sort by" name="sortBy" [options]="['Latest', 'Oldest', 'A to Z', 'Z to A', 'Highest', 'Lowest']" />
-      <app-select label="Category" name="category" [options]="['All Transactions', 'Entertainment', 'Bills', 'Groceries', 'Dining Out', 'Transportation', 'Personal Care', 'Education', 'Lifestyle', 'Shopping', 'General']" />
+      <app-select *ngIf="showSortSelect" label="Sort by" name="sortBy" [options]="['Latest', 'Oldest', 'A to Z', 'Z to A', 'Highest', 'Lowest']" />
+      <app-select *ngIf="showCategorySelect" label="Category" name="category" [options]="['All Transactions', 'Entertainment', 'Bills', 'Groceries', 'Dining Out', 'Transportation', 'Personal Care', 'Education', 'Lifestyle', 'Shopping', 'General']" />
     </div>
   </header>
 
   <table>
     <thead>
       <tr>
-        <th *ngFor="let title of titles">{{title}}</th>
+        <th *ngFor="let column of columns">{{column}}</th>
       </tr>
     </thead>
     <tbody>

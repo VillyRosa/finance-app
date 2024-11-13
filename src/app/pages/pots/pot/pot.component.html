@@ -1,0 +1,32 @@
+<div class="card">
+  <header>
+    <div>
+      <app-boll [color]="pot.theme" />
+      <h3>{{pot.name}}</h3>
+    </div>
+    <button>
+      <app-icon iconPath="icon-ellipsis.svg" />
+    </button>
+  </header>
+
+  <main>
+    <div class="line">
+      <p>Total Saved</p>
+      <h1>{{ pot.total | currency:'USD':'symbol' }}</h1>
+    </div>
+    <div class="line">
+      <div class="progress">
+        <div [style.width]="getPercentage() + '%'" [style.backgroundColor]="pot.theme"></div>
+      </div>
+    </div>
+    <div class="line">
+      <span>{{getPercentage() + '%'}}</span>
+      <p>Target of {{ pot.target | currency:'USD':'symbol' }}</p>
+    </div>
+  </main>
+
+  <div class="actionsButton">
+    <app-button color="secondary">+ Add Money</app-button>
+    <app-button color="secondary">Withdraw</app-button>
+  </div>
+</div>

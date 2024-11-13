@@ -8,7 +8,11 @@ import { ITableRow } from 'src/app/interfaces/tableRow';
 })
 export class TableComponent {
 
-  @Input() titles: string[] = [];
+  @Input() showSearch: boolean = true;
+  @Input() searchPlaceholder: string = '';
+  @Input() showSortSelect: boolean = true;
+  @Input() showCategorySelect: boolean = true;
+  @Input() columns: string[] = [];
   @Input() rows: ITableRow[] = [];
 
   public toString(value: string | number): string {

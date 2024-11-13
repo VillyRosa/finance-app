@@ -1,4 +1,5 @@
 <app-table
-  [titles]="['Recipient / Sender', 'Category', 'Transaction Date', 'Amount']"
+  searchPlaceholder="Search transaction"
+  [columns]="['Recipient / Sender', 'Category', 'Transaction Date', 'Amount']"
   [rows]="toTableRows()"
 />

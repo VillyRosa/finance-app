@@ -26,6 +26,8 @@ import { PaginationComponent } from './components/table/pagination/pagination.co
 import { SelectComponent } from './components/select/select.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { MoneyDisplayComponent } from './components/money-display/money-display.component';
+import { PotComponent } from './pages/pots/pot/pot.component';
+import { BollComponent } from './components/boll/boll.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { MoneyDisplayComponent } from './components/money-display/money-display.
     SelectComponent,
     AvatarComponent,
     MoneyDisplayComponent,
+    PotComponent,
+    BollComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,6 @@ export class OverviewComponent implements OnInit {
   public ngOnInit(): void {
     this.balanceService.get().subscribe((balance: IBalance) => {
       this.balance = balance;
-      console.log(balance);
     });
   }
 
