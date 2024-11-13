@@ -43,4 +43,30 @@ export class RecurringBillsComponent implements OnInit {
     });
   }
 
+  public getTotalBillsValue(): number {
+    return this.recurringBills.reduce((acc: number, transaction: ITransaction) => acc + transaction.amount, 0) * -1;
+  }
+
+  public getPaidBills(): ITransaction[] {
+    const today = new Date();
+    const todayDay = today.getDate();
+    return this.recurringBills.filter((transaction: ITransaction) => {
+      const transactionDay = new Date(transaction.date).getDate();
+      return transactionDay <= todayDay;
+    });
+  }
+
+  public getUnpaidBills(): ITransaction[] {
+    const today = new Date();
+    const todayDay = today.getDate();
+    return this.recurringBills.filter((transaction: ITransaction) => {
+      const transactionDay = new Date(transaction.date).getDate();
+      return transactionDay > todayDay;
+    });
+  }
+
+  public getTotalValue(transactions: ITransaction[]): number {
+    return transactions.reduce((acc: number, transaction: ITransaction) => acc + transaction.amount, 0) * -1;
+  }
+
 }

@@ -1,0 +1,15 @@
+<div class="card">
+  <h3>Summary</h3>
+  <div class="line">
+    <p>Paid Bills</p>
+    <span>{{ paidBillsAmount }} ({{ paidBillsTotalValue | currency: 'USD' }})</span>
+  </div>
+  <div class="line">
+    <p>Total Upcoming</p>
+    <span>{{ totalUpcomingAmount }} ({{ totalUpcomingTotalValue | currency: 'USD' }})</span>
+  </div>
+  <div class="line">
+    <p>Due Soon</p>
+    <span>{{ dueSoonAmount }} ({{ dueSoonTotalValue | currency: 'USD' }})</span>
+  </div>
+</div>

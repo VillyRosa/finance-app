@@ -1,0 +1,50 @@
+.container {
+  width: 100%;
+  gap: 24px;
+  display: flex;
+
+  div {
+    width: 337px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+
+    app-recurring-bills-summary {
+      width: 337px;
+    }
+  }
+
+  app-table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+
+    div {
+      width: 100%;
+      flex-direction: row;
+
+      app-recurring-bills-total-card {
+        width: 100%;
+      }
+
+      app-recurring-bills-summary {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+
+    div {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}

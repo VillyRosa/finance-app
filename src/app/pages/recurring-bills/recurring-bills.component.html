@@ -1,6 +1,19 @@
-<app-table
-  searchPlaceholder="Search bills"
-  [showCategorySelect]="false"
-  [columns]="['Bill Title', 'Due Date', 'Amount']"
-  [rows]="toTableRows()"
-/>
+<div class="container">
+  <div>
+    <app-recurring-bills-total-card [value]="getTotalBillsValue()" />
+    <app-recurring-bills-summary
+      [paidBillsAmount]="getPaidBills().length"
+      [paidBillsTotalValue]="getTotalValue(getPaidBills())"
+      [totalUpcomingAmount]="getUnpaidBills().length"
+      [totalUpcomingTotalValue]="getTotalValue(getUnpaidBills())"
+      [dueSoonAmount]="getUnpaidBills().length"
+      [dueSoonTotalValue]="getTotalValue(getUnpaidBills())"
+    />
+  </div>
+  <app-table
+    searchPlaceholder="Search bills"
+    [showCategorySelect]="false"
+    [columns]="['Bill Title', 'Due Date', 'Amount']"
+    [rows]="toTableRows()"
+  />
+</div>

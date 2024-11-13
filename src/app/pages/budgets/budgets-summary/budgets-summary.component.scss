@@ -1,0 +1,48 @@
+.card {
+  width: 100%;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: var(--white);
+
+  .budgetsList {
+    width: 100%;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+
+    .line {
+      width: 100%;
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--grey-100);
+
+      &:nth-last-child(1) {
+        border: none;
+      }
+
+      div {
+        gap: 16px;
+        display: flex;
+
+        .pipeTheme {
+          width: 4px;
+          height: 21px;
+          border-radius: 8px;
+        }
+
+        .categoryName {
+          color: var(--grey-500);
+        }
+
+        &:nth-last-child(1) {
+          gap: 8px;
+        }
+
+        p:nth-child(1) {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

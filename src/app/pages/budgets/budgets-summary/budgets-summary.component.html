@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="budgetsList">
+    <h3>Spending Summary</h3>
+    <div class="line" *ngFor="let item of items">
+      <div>
+        <div class="pipeTheme" [style.backgroundColor]="item.theme"></div>
+        <p class="categoryName">{{item.category}}</p>
+      </div>
+      <div>
+        <p>{{item.total | currency: "USD"}}</p>
+        <p>of {{item.maximum | currency: "USD"}}</p>
+      </div>
+    </div>
+  </div>
+</div>

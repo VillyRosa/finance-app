@@ -1,0 +1,6 @@
+<div class="container">
+  <app-budgets-summary [items]="toSummaryItems()" />
+  <div class="cardList">
+    <app-budgets-card *ngFor="let budget of budgets" />
+  </div>
+</div>

@@ -28,6 +28,10 @@ import { AvatarComponent } from './components/avatar/avatar.component';
 import { MoneyDisplayComponent } from './components/money-display/money-display.component';
 import { PotComponent } from './pages/pots/pot/pot.component';
 import { BollComponent } from './components/boll/boll.component';
+import { RecurringBillsSummaryComponent } from './pages/recurring-bills/recurring-bills-summary/recurring-bills-summary.component';
+import { RecurringBillsTotalCardComponent } from './pages/recurring-bills/recurring-bills-total-card/recurring-bills-total-card.component';
+import { BudgetsSummaryComponent } from './pages/budgets/budgets-summary/budgets-summary.component';
+import { BudgetsCardComponent } from './pages/budgets/budgets-card/budgets-card.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +60,10 @@ import { BollComponent } from './components/boll/boll.component';
     MoneyDisplayComponent,
     PotComponent,
     BollComponent,
+    RecurringBillsSummaryComponent,
+    RecurringBillsTotalCardComponent,
+    BudgetsSummaryComponent,
+    BudgetsCardComponent,
   ],
   imports: [
     BrowserModule,
