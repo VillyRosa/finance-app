@@ -1,12 +1,31 @@
 <div class="card">
   <header>
     <div>
-      <app-boll />
+      <app-boll color="var(--green)" />
       <h3>Categoria</h3>
     </div>
     <app-icon iconPath="icon-ellipsis.svg" />
   </header>
   <div class="card-content">
     <p>Maximum of {{ 50 | currency: 'USD' }}</p>
+    <div class="progress-bar">
+      <div [style.width]="30 + '%'" [style.backgroundColor]="'var(--green)'"></div>
+    </div>
+    <div class="spendRemaining">
+      <div>
+        <div class="pipe"></div>
+        <div>
+          <p>Spend</p>
+          <h4>{{ 15 | currency: 'USD' }}</h4>
+        </div>
+      </div>
+      <div>
+        <div class="pipe"></div>
+        <div>
+          <p>Remaining</p>
+          <h4>{{ 35 | currency: 'USD' }}</h4>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
